@@ -8,32 +8,46 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #525659;
+    background-color: #f4f6f9;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .header {
     background: linear-gradient(135deg, #003366 0%, #004080 100%);
     color: #ffffff;
-    padding: 30px 20px;
+    padding: 60px 20px;
     text-align: center;
     border-bottom: 5px solid #d4af37;
-    display: none;
+    display: block;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0.9;
 }
 
 .container {
-    width: 210mm;
-    min-height: 297mm;
-    margin: 30px auto;
+    max-width: 800px;
+    width: 95%;
+    margin: 40px auto;
     background: #ffffff;
-    padding: 20mm;
-    border-radius: 2px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    position: relative;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .paper-header {
+    display: none;
     text-align: center;
     border-bottom: 2px solid #003366;
     margin-bottom: 30px;
@@ -54,65 +68,67 @@ body {
 }
 
 .section-title {
-    font-size: 16pt;
+    font-size: 1.8em;
     color: #003366;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
     display: block;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    margin-top: 30px;
     font-weight: bold;
 }
 
 .speaker-box {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     background: #f8f9fa;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 20px;
+    border-left: 5px solid #003366;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 6px;
 }
 
 .speaker-img-large {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #d4af37;
-    margin-right: 20px;
+    border: 4px solid #d4af37;
+    margin-right: 25px;
+    flex-shrink: 0;
 }
 
 .speaker-info h3 {
-    margin: 0;
+    margin: 0 0 10px 0;
     color: #003366;
-    font-size: 14pt;
+    font-size: 1.5em;
 }
 
 .speaker-role {
     color: #d4af37;
     font-weight: bold;
-    font-size: 10pt;
+    text-transform: uppercase;
+    font-size: 0.9em;
     display: block;
     margin-bottom: 10px;
 }
 
 .speaker-bio {
-    font-size: 10pt;
-    color: #444;
-    text-align: justify;
+    font-size: 1em;
+    color: #555;
     margin: 0;
+    line-height: 1.5;
 }
 
 .info-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    font-size: 11pt;
+    margin-bottom: 30px;
 }
 
 .info-table td {
-    padding: 8px;
-    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
     vertical-align: top;
 }
 
@@ -120,15 +136,20 @@ body {
     font-weight: bold;
     width: 30%;
     color: #003366;
-    background-color: #f0f4f8;
+    background-color: #f8fbfd;
 }
 
 .total-row {
     background-color: #fff3cd !important;
     color: #000000 !important;
-    font-size: 14pt;
+    font-size: 1.2em;
     font-weight: bold;
-    border: 2px solid #ffeeba;
+}
+
+.ticket-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #003366;
 }
 
 .status-verified {
@@ -137,112 +158,59 @@ body {
 }
 
 .form-wrapper {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
-    font-weight: bold;
-    font-size: 10pt;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
 }
 
 .form-group input, 
 .form-group select {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    font-size: 10pt;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #003366;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,51,102,0.2);
+}
+
+.price-display {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: 5px;
 }
 
 .checkbox-wrapper {
     display: flex;
     align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .checkbox-wrapper input {
     width: auto;
-    margin-right: 10px;
-    transform: scale(1.1);
-}
-
-.btn-submit {
-    width: 100%;
-    background-color: #003366;
-    color: #fff;
-    padding: 10px;
-    font-size: 12pt;
-    font-weight: bold;
-    border: none;
+    margin-right: 12px;
+    transform: scale(1.2);
     cursor: pointer;
-    margin-top: 10px;
-}
-
-.action-bar {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.btn-print {
-    background-color: #555;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 11pt;
-}
-
-.link-back {
-    color: #003366;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 10pt;
-    display: block;
-    margin-top: 10px;
-}
-
-@media print {
-    body {
-        background-color: white;
-        margin: 0;
-    }
-    .container {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-        border: none;
-        min-height: auto;
-    }
-    .action-bar, .btn-submit {
-        display: none !important;
-    }
-    .form-wrapper {
-        border: none;
-        padding: 0;
-    }
-    .total-row {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        background-color: #fff3cd !important;
-    }
-    .info-table td:first-child {
-        background-color: #f0f4f8 !important;
-    }
-}
-
-.ticket-price {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #003366;
 }
 
 .checkbox-label {
@@ -255,4 +223,117 @@ input[type="file"] {
     background: #fff;
     padding: 10px;
     height: auto;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #003366;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #002244;
+}
+
+.action-bar {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-print {
+    background-color: #343a40;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.link-back {
+    color: #003366;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+    }
+    .header {
+        padding: 40px 15px;
+    }
+    .header h1 {
+        font-size: 1.8em;
+    }
+    .speaker-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .speaker-img-large {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .info-table td {
+        display: block;
+        width: 100%;
+    }
+    .info-table td:first-child {
+        width: 100%;
+        border-bottom: none;
+    }
+}
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    .header {
+        display: none;
+    }
+    .container {
+        width: 210mm;
+        margin: 0 auto;
+        padding: 10mm;
+        box-shadow: none;
+        border: none;
+        max-width: none;
+    }
+    .paper-header {
+        display: block;
+    }
+    .btn-submit, .action-bar {
+        display: none;
+    }
+    .form-wrapper {
+        border: none;
+        padding: 0;
+    }
+    .speaker-box {
+        border: 1px solid #ccc;
+        background: none;
+    }
+    .checkbox-wrapper {
+        background: none;
+        padding: 0;
+    }
+    .section-title {
+        font-size: 14pt;
+        margin-top: 15px;
+        border-bottom: 1px solid #000;
+    }
 }
