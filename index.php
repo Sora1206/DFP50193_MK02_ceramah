@@ -33,7 +33,7 @@
             </tr>
             <tr>
                 <td>Logistik</td>
-                <td>25 Februari 2026 | 9:00 Pagi | Dewan Besar</td>
+                <td>25 Februari 2026 | 9:00 Pagi | Dewan Besar Kangar</td>
             </tr>
             <tr>
                 <td>Yuran</td>
