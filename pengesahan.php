@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bukti_nama = $_FILES['bukti']['name'] ?? 'Tiada Fail';
 
     // 2. KIRA JUMLAH YURAN (TUGASAN TAMBAHAN)
-    $harga_seunit = 500;
+    $harga_seunit = 150;
     $jumlah_bayaran = $slot * $harga_seunit;
 
 } else {
