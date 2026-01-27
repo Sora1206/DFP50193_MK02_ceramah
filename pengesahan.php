@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Nama fail 
     $bukti_nama = $_FILES['bukti']['name'] ?? 'Tiada Fail';
 
-    // 2. KIRA JUMLAH YURAN (TUGASAN TAMBAHAN)
+    // 2. KIRA JUMLAH YURAN
     $harga_seunit = 150;
     $jumlah_bayaran = $slot * $harga_seunit;
 
@@ -39,9 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="container">
         
+        <div class="paper-header">
+            <h1>SEMINAR PEMBANGUNAN WEB PROFESIONAL</h1>
+            <p>Politeknik Tuanku Syed Sirajuddin (PTSS)</p>
+        </div>
+
         <div class="success-message">
             <h2>Tahniah, Tempahan Berjaya!</h2>
-            <p>Terima kasih kerana mendaftar untuk Global Web Summit 2026.</p>
+            <p>Terima kasih kerana mendaftar. Berikut adalah butiran tempahan dan maklumat program.</p>
         </div>
 
         <h2 class="section-title">Ringkasan Tempahan</h2>
@@ -75,6 +80,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <tr class="total-row">
                 <td>JUMLAH BAYARAN</td>
                 <td>RM <?php echo number_format($jumlah_bayaran, 2); ?></td>
+            </tr>
+        </table>
+
+        <h2 class="section-title">Maklumat Seminar</h2>
+
+        <div class="speaker-box">
+            <img src="puan hafizah.jpg" alt="Ts. Nor Hafizah binti Md Desa" class="speaker-img-large">
+            
+            <div class="speaker-info">
+                <h3>Ts. Nor Hafizah binti Md Desa</h3>
+                <span class="speaker-role">Pensyarah & Teknologis Profesional, JTMK PTSS</span>
+                <p class="speaker-bio">
+                    Beliau merupakan seorang pensyarah yang berdedikasi di Jabatan Teknologi Maklumat & Komunikasi (JTMK), PTSS. Sebagai seorang <strong style="color:#003366;">Teknologis Profesional (Ts.)</strong> yang diiktiraf, beliau mempunyai kepakaran teknikal yang mendalam.
+                </p>
+            </div>
+        </div>
+
+        <table class="info-table">
+            <tr>
+                <td>Tajuk Seminar</td>
+                <td><strong>Evolusi Teknologi Web: Perspektif Teknologis Profesional</strong></td>
+            </tr>
+            <tr>
+                <td>Butiran Logistik</td>
+                <td>
+                    📅 <strong>Tarikh:</strong> 15 Mac 2026<br>
+                    📍 <strong>Lokasi:</strong> Dewan Kuliah Utama, PTSS<br>
+                    ⏰ <strong>Masa:</strong> 8:30 Pagi - 1:00 Tengahari
+                </td>
+            </tr>
+            <tr>
+                <td>Hubungan</td>
+                <td>urusetia.jtmk@ptss.edu.my | 04-988 6200</td>
             </tr>
         </table>
 
